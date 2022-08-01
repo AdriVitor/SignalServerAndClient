@@ -9,7 +9,6 @@ var app = builder.Build();
 app.MapHub<DateHub>("/datehub");
 
 app.Run();
-
 public class DateHub : Hub{
     public async IAsyncEnumerable<DateTime> StreamingDate(){
         while(true){
